@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Word in Sentence</title>
+</head>
+<body>
+    <p id="output"></p>
+
+    <script>
+        function reverseWordInSentence(sentence, wordToReverse) {
+            function reverseWordsInSentence(sentence) {
+            const words = sentence.split(' ');
+            const reversedWords = words.map(word => word.split('').reverse().join(''));
+            return reversedWords.join(' ');
+        }
+        const inputSentence = "Hello World";
+        const reversedSentence = reverseWordsInSentence(inputSentence);
+        console.log(reversedSentence); 
+        }
+        const sentence = "Hello, world!";
+        const wordToReverse = "world";
+        const reversedSentence = reverseWordInSentence(sentence, wordToReverse);       
+        document.getElementById("output").textContent = reversedSentence;
+    </script>
+</body>
+</html>

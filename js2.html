@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Array in Descending Order</title>
+</head>
+<body>
+
+<script>
+    const numbers = [5, 2, 9, 1, 5, 6];
+    numbers.sort(function(a, b) {
+        return b - a;
+    });
+    const outputParagraph=document.createElement("p");
+    outputParagraph.textContent="Sorted array in decending order : "+ numbers.join(", ");
+    document.body.appendChild(outputParagraph);
+</script>
+</body>
+</html>

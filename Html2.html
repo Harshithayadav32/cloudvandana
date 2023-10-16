@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    
+</head>
+<body>
+    <div class="sform">
+    <form style="background-color: aquamarine;width: 600px;margin-left: 400px;border: 2px black;">
+        <fieldset style="border-color: black;">
+    <h1 style="text-align: center;">Survey Form</h1>
+    <form id="surveyForm">
+        <label name="firstName">First Name:</label>
+        <input type="text" required id="firstName" name="firstName "placeholder="Ex: Sachin">
+        <br>
+        <br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" required id="lastName" name="lastName" placeholder="Ex: Tendulkar"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" required>
+            <option value="">Select Country</option>
+            <option name="India">India</option>
+            <option>USA</option>
+        </select><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="Gender"> Male
+        <input type="radio" id="female" name="Gender"> Female
+        <input type="radio" id="other" name="Gender"> Other<br><br>
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="ex:sachin@gmail.com"><br><br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" required ><br><br>
+
+        <input type="submit">
+        <input type="reset">
+    </fieldset>
+    </form>
+</div>
+<script>
+    function submitForm(){
+
+    }
+    function resetForm(){
+
+    }
+    function closePopup(){
+        document.getElementById("popup").classList.add("hidden");
+        resetForm();
+    }
+</script>
+</body>
+</html>

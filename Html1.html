@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+    <style>
+        .calculator {
+            width: 170px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: black;
+            
+        }
+        .button{
+            background-color: black;
+            text-decoration-color: white;
+            width:170px;
+            height:150px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <br>
+        <br>
+        <div class="button">
+        <button style="background-color: black;color: white;margin-left: 5px;" onclick="appendToResult('9')">9</button>
+        <button style="background-color: black;color: white;" onclick="appendToResult('8')">8</button>
+        <button style="background-color: black;color: white;" onclick="appendToResult('7')">7</button>
+        <button style="background-color: rgb(158, 154, 154);color: white;width: 40px;"onclick="appendToResult('+')">+</button>
+        <button style="background-color: rgb(115, 192, 170);color: white;"onclick="clearResult()">AC</button>
+        <br>
+        <br>
+        <button style="background-color: black;color: white;margin-left: 5px;" onclick="appendToResult('4')">4</button>
+        <button style="background-color: black;color: white;" onclick="appendToResult('5')">5</button>
+        <button style="background-color: black;color: white;" onclick="appendToResult('6')">6</button>
+        <button style="background-color: rgb(158, 154, 154);color: white;width: 40px;"onclick="appendToResult('-')">-</button>
+        <br>
+        <br>
+        <button style="background-color: black;color: white;margin-left: 5px;" onclick="appendToResult('1')">1</button>
+        <button style="background-color: black;color: white;" onclick="appendToResult('2')">2</button>
+        <button style="background-color: black;color: white;" onclick="appendToResult('3')">3</button>
+        <button style="background-color: rgb(158, 154, 154);color: white;width: 40px;"onclick="appendToResult('*')">*</button>
+        <br>
+        <br>
+        <button style="background-color: black;color: white;width:23px;margin-left: 5px;" onclick="appendToResult('.')">.</button>
+        <button style="background-color: black;color: white;" onclick="appendToResult('0')">0</button>
+        <button style="background-color: black;color: white;" onclick="calculateResult()">=</button>
+
+        <button style="background-color: rgb(158, 154, 154);color: white;width: 40px;"onclick="appendToResult('/')">/</button>
+        
+    </div>
+    </div>
+
+    <script>
+        function appendToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function calculateResult() {
+            const result = eval(document.getElementById('result').value);
+            document.getElementById('result').value = result;
+        }
+    </script>
+</body>
+</html>
